@@ -23,6 +23,10 @@
     <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <script src="js/gauge.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
     <!--owl carousel-->
     <link href='css/owl.carousel.min.css' rel="stylesheet" type="text/css"/>    
     <script src='js/owl.carousel.min.js'></script>
@@ -101,7 +105,7 @@
                             <img class="help" src="img/icons/help.png"/>
                         </p>
                         <div class="dash-meter">
-                            <img class="meter" src="img/guage-meter.png" />
+                            <canvas class="meter" id="guage-1"></canvas>
                         </div>
                         <p class="dash-meter-no">
                             Today<span>20 min.</span>
@@ -116,7 +120,7 @@
                             <img class="help" src="img/icons/help.png"/>
                         </p>
                         <div class="dash-meter">
-                            <img class="meter" src="img/guage-meter.png" />
+                            <canvas class="meter" id="guage-2"></canvas>
                         </div>
                         <p class="dash-meter-no">
                             Today<span>20 min.</span>
@@ -131,7 +135,7 @@
                             <img class="help" src="img/icons/help.png"/>
                         </p>
                         <div class="dash-meter">
-                            <img class="meter" src="img/guage-meter.png" />
+                            <canvas class="meter" id="guage-3"></canvas>
                         </div>
                         <p class="dash-meter-no">
                             Today<span>20 min.</span>
@@ -140,7 +144,7 @@
                     </div>
                 </div>
                 <div class="dash-center">
-                    <div class="dash-box">
+                    <div class="dash-box dash-response-bx">
                         <div class="dash-head dash-resp-head">
                             <div class="dash-title">
                                 <img class="dash-icon" src="img/icons/survey.png"/>
@@ -247,7 +251,9 @@
                                 <img class="help" src="img/icons/help.png"/>
                             </p>
                             <div class="graph-img-box">
-                                <img class="graph-img" src="img/graph-1.png"/>
+                                <div class="graph-img">
+                                    <canvas id="gragh-line-chart1"></canvas>
+                                </div>
                                 <p class="graph-p"><span>3500</span>CASE</p>
                             </div>
                         </div>
@@ -270,7 +276,9 @@
                                 <img class="help" src="img/icons/help.png"/>
                             </p>
                             <div class="graph-img-box">
-                                <img class="graph-img" src="img/graph-2.png"/>
+                                <div class="graph-img">
+                                    <canvas id="gragh-line-chart2"></canvas>
+                                </div>
                                 <p class="graph-p"><span>150</span>Surveyors</p>
                             </div>
                         </div>
@@ -312,7 +320,7 @@
                             <img class="help" src="img/icons/help.png"/>
                         </p>
                         <div class="graph-box">
-                            <img src="img/graph-3.png"/>
+                            <canvas id="gragh-line-chart3"></canvas>
                         </div>
                     </div>
                     <div class="dash-box">
@@ -323,7 +331,7 @@
                             <img class="help" src="img/icons/help.png"/>
                         </p>
                         <div class="graph-box">
-                            <img src="img/graph-4.png"/>
+                            <canvas id="gragh-line-chart4"></canvas>
                         </div>
                     </div>
                     <div class="dash-box">
@@ -334,7 +342,7 @@
                             <img class="help" src="img/icons/help.png"/>
                         </p>
                         <div class="graph-box">
-                            <img src="img/graph-5.png"/>
+                            <canvas id="gragh-line-chart5"></canvas>
                         </div>
                     </div>
                 </div>

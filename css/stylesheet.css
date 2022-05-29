@@ -72,8 +72,8 @@ a {
   z-index: 2;
 }
 .app-wrap .side-bar .logo{
-  padding: 0px 5px;
-  margin-top: 20px;
+  padding: 0px 8px;
+  margin-top: 25px;
 }
 .app-wrap .side-bar .logo img{
   width: 100%;
@@ -188,22 +188,21 @@ a {
 }
 .app-wrap .content{
   display: grid;
-  grid-template-columns: 16% 1fr 14%;
-  grid-template-rows: auto auto;
+  grid-template-columns: 16% 1fr 13%;
+  grid-template-rows: 1fr auto;
   grid-gap: 10px;
   padding-right: 10px;
 }
 .app-wrap .content .dash-box{
-  border: 1px solid #f9f9f9;
+  border: 1px solid rgb(213 213 213);
   background-color: white;
   box-shadow: 0px 0px 12px rgb(17 17 17 / 8%);
-  border-radius: 22px;
+  border-radius: 20px;
   padding: 8px;
   display: grid;
   grid-template-rows: auto auto;
   align-content: space-between;
 }
-
 .app-wrap .content .dash-box .dash-head{
   position: relative;
   display: grid;
@@ -240,7 +239,7 @@ a {
   column-gap: 12px;
 }
 .app-wrap .content .dash-box .dash-resp-head span{
-  padding: 0px;
+  padding: 0px !important;
 }
 .app-wrap .content .dash-box .dash-resp-head .dash-color{
   font-size: 12px;
@@ -311,6 +310,7 @@ a {
 }
 .app-wrap .content .dash-left .dash-box .dash-meter .meter{
   width: 100%;
+  aspect-ratio: 130 / 74;
 }
 .app-wrap .content .dash-left .dash-box .dash-meter-no{
   font-size: 10px;
@@ -327,8 +327,12 @@ a {
 }
 .app-wrap .content .dash-center{
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto auto;
   row-gap: 10px;
+}
+.app-wrap .content .dash-center .dash-response-bx{
+  grid-template-rows: auto 1fr;
+  row-gap: 14px;
 }
 .app-wrap .content .dash-center .dash-response-box{
   margin-top: 8px;
@@ -340,6 +344,8 @@ a {
   border: 1px solid #d7d7d7;
   border-radius: 15px;
   overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 .app-wrap .content .dash-center .dash-response-box .dash-reponse-head{
   background: #32835B;
@@ -348,8 +354,8 @@ a {
   grid-template-columns: 1fr auto;
 }
 .app-wrap .content .dash-center .dash-response-box .dash-reponse-head p{
-  font-size: 19px;
-  padding: 5px 9px 3px;
+  font-size: 18px;
+  padding: 3px 9px 0px;
 }
 .app-wrap .content .dash-center .dash-response-box .dash-reponse-head p span{
   font-size: 15px;
@@ -392,13 +398,14 @@ a {
   text-align: center;
   position: relative;
   padding: 7px 0px;
+  align-items: center;
 }
 .app-wrap .content .dash-center .dash-response-box .dash-reponse-body::after{
   content: '';
   background: #707070;
   position: absolute;
   width: 2px;
-  height: calc(100% - 10px);
+  height: 40px;
   left: 0px;
   right: 0px;
   top: 0px;
@@ -423,6 +430,7 @@ a {
 .app-wrap .content .dash-center .num-box-row .dash-box{
   border-radius: 15px;
   padding: 8px 8px 3px;
+  align-content: space-evenly;
 }
 .app-wrap .content .dash-center .num-box-row .small{
   font-size: 11px;
@@ -442,7 +450,7 @@ a {
 }
 .app-wrap .content .dash-center .dash-graph-num .graph-box{
   grid-template-rows: auto 1fr;
-  row-gap: 20px;
+  row-gap: 6px;
 }
 .app-wrap .content .dash-center .dash-graph-num .graph-box .flo-select{
   position: absolute;
@@ -460,9 +468,10 @@ a {
   align-items: center;
 }
 .app-wrap .content .dash-center .dash-graph-num .graph-box .graph-img-box .graph-img{
-  width: auto;
-  height: auto;
-  max-height: 116px;
+
+}
+.app-wrap .content .dash-center .dash-graph-num .graph-box .graph-img-box .graph-img canvas{
+  max-height: 96px;
 }
 .app-wrap .content .dash-center .dash-graph-num .graph-box .graph-img-box .graph-p{
   color: #32835b;
@@ -492,13 +501,14 @@ a {
   font-weight: 500;
   color: #32835b;
   text-align: center;
-  line-height: 31px;
+  line-height: 26px;
+  font-size: 14px;
 }
 .app-wrap .content .dash-center .dash-graph-num .dash-acq-box .dash-box p span{
   display: block;
   color: #444444;
   font-weight: 800;
-  font-size: 33px;
+  font-size: 30px;
 }
 .app-wrap .content .dash-right{
   display: grid;
@@ -507,8 +517,8 @@ a {
 }
 .app-wrap .content .dash-right .dash-right-btn{
   border: 1px solid #32835b;
-  border-radius: 11px;
-  font-size: 14px;
+  border-radius: 7px;
+  font-size: 12px;
   font-weight: 500;
   color: #32835b;
   text-align: center;
@@ -519,7 +529,7 @@ a {
 }
 .app-wrap .content .dash-right .dash-box .dash-big{
   font-weight: 600;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 32px;
   color: #444444;
   display: grid;
@@ -540,8 +550,17 @@ a {
 .app-wrap .content .dash-bottom{
   grid-column: span 2;
   display: grid;
-  grid-template-columns: 30% 1fr 30%;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
+}
+.app-wrap .content .dash-bottom .dash-box{
+  row-gap: 20px;
+}
+.app-wrap .content .dash-bottom .dash-box .graph-box{
+
+}
+.app-wrap .content .dash-bottom .dash-box .graph-box canvas{
+  max-height: 100%;
 }
 .app-wrap .footer{
   position: relative;
@@ -565,3 +584,4 @@ a {
   text-align: center;
   color: #707070;
 }
+
