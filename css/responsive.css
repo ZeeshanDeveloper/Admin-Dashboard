@@ -391,5 +391,14 @@
     .app-wrap .content .dash-right .dash-box .dash-big {
         font-size: 17px;
     }
-    
+    .app-wrap .content .dash-box .dash-head .copy{
+        width: 12px;
+        right: 14px;
+        top: -4px;
+    }
+    .app-wrap .content .dash-box .dash-head .help{
+        width: 12px;
+        right: -4px;
+        top: -4px;
+    }
 }
