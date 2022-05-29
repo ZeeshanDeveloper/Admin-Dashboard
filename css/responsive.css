@@ -376,7 +376,7 @@
         row-gap: 10px;
     }
     .app-wrap .content .dash-bottom .dash-box .graph-box canvas {
-        max-height: 150px;
+        max-height: 130px;
     }
     .app-wrap .content .dash-right .dash-box .dash-big {
         font-size: 17px;
