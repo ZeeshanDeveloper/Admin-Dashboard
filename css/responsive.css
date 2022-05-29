@@ -270,7 +270,7 @@
     .app-wrap .top-bar .h1 {
         position: relative;
         top: 6px;
-        font-size: 14px;
+        font-size: 13px;
     }
     .app-wrap .top-bar .top-bar-filter{
         grid-template-columns: auto auto;
@@ -285,6 +285,7 @@
         position: relative;
         top: 0px;
         right: 0px;
+        font-size: 9px;
     }
     .app-wrap .top-bar .top-bar-filter .top-user{
         position: relative;
@@ -369,6 +370,14 @@
     .app-wrap .content .dash-center .dash-graph-num .graph-box .graph-img-box .graph-p span{
         font-size: 25px;
     }
+    .app-wrap .content .dash-center .dash-graph-num .graph-box .graph-img-box .graph-img canvas{
+        max-height: none;
+        max-width: 100%;
+    }
+    .app-wrap .content .dash-center .dash-graph-num .graph-box .graph-img-box .graph-img.donught canvas{
+        max-width: 75%;
+        margin: auto;
+    }
     .app-wrap .content .dash-right{
         grid-template-columns: 1fr 1fr;
     }
@@ -382,4 +391,5 @@
     .app-wrap .content .dash-right .dash-box .dash-big {
         font-size: 17px;
     }
+    
 }
